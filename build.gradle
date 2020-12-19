@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.3.3.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
+    id 'maven'
 }
 
 group 'ca.unmined.api.main'
@@ -14,9 +15,15 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation "mysql:mysql-connector-java:6.0.6"
+
     compileOnly 'org.springframework.boot:spring-boot-devtools'
-    compile 'com.auth0:java-jwt:3.4.0'
     compile "org.springframework.boot:spring-boot-starter-security"
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+    compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.9.1'
+
+//    compile "com.oracle.ojdbc:ojdbc8:19.3.0.0"
+//    compile 'com.auth0:java-jwt:3.4.0'
 
     runtimeOnly 'com.h2database:h2'
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
