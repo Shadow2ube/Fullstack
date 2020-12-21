@@ -10,6 +10,7 @@ import { Navbar, NavItem, DropdownMenu } from "./Navbar";
 import { Home } from "./pages/Home";
 import { About } from "./pages/About";
 import { Terminal } from "./pages/Terminal";
+import { Test } from "./pages/TestGet";
 import { Error404 } from "./pages/Error404";
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/" exact component={Home} />
         <Route path="/about" exact component={About} />
         <Route path="/terminal" exact component={Terminal} />
+        <Route path="/test" exact component={Test} />
         <Route path="/" component={Error404} />
       </Switch>
     </BrowserRouter>

@@ -6,14 +6,7 @@ export const Home = ({ history }) => {
   return (
     <div>
       <div>Home</div>
-      <Link to="/about">About</Link>
-      <button
-        onClick={() => {
-          history.push("/about");
-        }}
-      >
-        Click-eth
-      </button>
+      <Link to="/test">Test</Link>
     </div>
   );
 };
