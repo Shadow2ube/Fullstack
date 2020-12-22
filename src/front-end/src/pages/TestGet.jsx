@@ -4,9 +4,9 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 export const Test = () => {
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState();
 
-  const url = "http://localhost:8080/users/2";
+  const url = "http://localhost:8080/users/";
 
   const fetchData = async () => {
     const response = await axios.get(url);
@@ -14,18 +14,21 @@ export const Test = () => {
     console.log(response.data);
   };
 
-  const checkIfEmpty = () => {
-    if (userData === null || userData === undefined) {
-      return false;
-    }
-    return true;
-  };
-
   return (
     <div>
       <h1>Info</h1>
       <button onClick={fetchData}>fetch data</button>
-      <div>{userData && checkIfEmpty()}</div>
+      <div id="info">{/* <getData userData={userData} /> */}</div>
     </div>
   );
 };
+
+// function getData(props) {
+//   return (
+//     <div>
+//       <div>{props.id}</div>
+//       <div>{props.name}</div>
+//       <div>{props.info}</div>
+//     </div>
+//   );
+// }

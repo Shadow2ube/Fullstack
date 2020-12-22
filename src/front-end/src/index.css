@@ -164,6 +164,7 @@ textarea {
   transition: all var(--speed) ease;
 }
 
+/* Terminal stuff */
 .terminal {
   width: 100%;
   border: 1px solid white;
@@ -171,5 +172,28 @@ textarea {
 }
 
 .terminal td {
+  border: 1px solid white;
+  text-align: center;
   vertical-align: center;
+  width: 80%;
 }
+
+.terminal td:first-child {
+  width: 10%;
+}
+
+.terminal td:last-child {
+  width: 10%;
+}
+
+.terminal textarea {
+  padding: 0;
+  margin: 0;
+  vertical-align: center;
+  width: 100%;
+  height: 50em;
+  background-color: #444444;
+  color: #ffffff;
+}
+
+/* end: Terminal stuff */
